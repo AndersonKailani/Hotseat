@@ -1,0 +1,492 @@
+/* Global styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Orbitron', sans-serif;
+    background-color: pink;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+    color: #333;
+    background: url('/old.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+/* Hero section with background video */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Apply font to specific elements within sections */
+section .content-text {
+    font-family: 'Orbitron', sans-serif; /* Same font as navbar */
+    /* Other styles */
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.video-wrap {
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%; /* Adjust width for larger video */
+  height: 120%; /* Adjust height for larger video */
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable pointer events on the iframe to prevent YouTube controls */
+}
+
+.container {
+    z-index: 1; /* Ensure content is above video */
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+}
+/* Ensure the carousel takes full width */
+.carousel-inner {
+    width: 100%;
+    max-height: 300px; /* Adjust height as needed */
+  }
+  
+  .carousel-item {
+    height: 50%;
+    
+  }
+  
+  .carousel-item img {
+    width: 300%;
+    object-fit: cover; /* Ensure images cover entire area */
+  }
+  
+  /* Center the carousel controls horizontally */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
+  }
+  
+  /* Optionally adjust the size of control icons */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 70px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+  }
+  
+  /* Center the control icons vertically */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for icons */
+  }
+  
+  /* Optionally style the carousel indicators */
+  .carousel-indicators {
+    bottom: 10px; /* Adjust position as needed */
+  }
+  
+
+/* Navbar styles */
+.navbar {
+    background: linear-gradient(to right, #ff1493, #ff69b4);
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+    font-family: 'Orbitron', sans-serif; /* Change to your preferred glowing font */
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: white !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important; /* Gold color on hover */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 1), 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.container h1, .container h2 {
+    font-family: 'VT323', monospace;
+    text-shadow: 3px 3px 0px #000, 5px 5px 0px #fff, 6px 6px 0px #000;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: hotpink;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: hotpink;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(5, 5, 5, 0.9);
+    animation: fadeIn 1s ease-in-out;
+}
+/* Apply font to specific elements within sections */
+section .content-text {
+    font-family: 'Roboto', sans-serif; /* Same font as navbar */
+    /* Other styles */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+li {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* Post and Profile Page Styles */
+.post {
+    border: 1px solid hotpink;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(103, 9, 141);
+background: linear-gradient(0deg, rgb(142, 0, 170) 0%, rgba(57, 209, 255, 0) 100%);
+
+}
+
+.post p {
+    font-size: 1.2em;
+    font-family: 'Orbitron', sans-serif;
+     color: #1eec52;
+}
+
+.post {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #57e2f5;
+        font-family: 'Orbitron', sans-serif;
+
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: deeppink;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: hotpink;
+    text-shadow: 2px 2px 4px #000000;
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Profile Page Specific Styles */
+.profile-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cover-photo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #d3d3d3;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: auto;
+}
+
+#upload-cover-photo-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2; /* Ensure button is above cover photo */
+}
+
+
+.profile-info {
+    position: relative;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.profile-info .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    margin-top: -60px;
+}
+
+#upload-profile-picture-btn {
+    margin-top: 10px;
+}
+
+.profile-info h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+    .login-form h1 {
+        font-size: 2.5rem;
+    }
+}
+/* Flame button animation */
+@keyframes flames {
+    0% {
+      text-shadow: 
+        0 0 10px #ff00ff, 
+        0 0 20px #ff00ff, 
+        0 0 30px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 50px #ff00ff, 
+        0 0 60px #ff00ff, 
+        0 0 70px #ff00ff;
+    }
+    50% {
+      text-shadow: 
+        0 0 20px #ff00ff, 
+        0 0 30px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 50px #ff00ff, 
+        0 0 60px #ff00ff, 
+        0 0 70px #ff00ff, 
+        0 0 80px #ff00ff;
+    }
+    100% {
+      text-shadow: 
+        0 0 10px #ff00ff, 
+        0 0 20px #ff00ff, 
+        0 0 30px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 50px #ff00ff, 
+        0 0 60px #ff00ff, 
+        0 0 70px #ff00ff;
+    }
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: #ff00ff;
+    animation: flames 1s infinite;
+    border: 2px solid #ff00ff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 10px; /* Add some space between buttons */
+  }
+  
+  h3:hover {
+    background-color: #ff00ff;
+    color: white;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Custom styling for testimonial cards */
+.card {
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #16f116;
+}
+
+.card-footer {
+    padding: 15px 20px;
+    background-color: #000000;
+    border-top: 1px solid #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+h5.card-title {
+
+color: #ffffff;
+}
+
+.img-wrapper {
+    text-align: center;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+/* Profile picture styling */
+.post-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Heart like button */
+  .like-button {
+    cursor: pointer;
+    color: red;
+  }
+  
+  .like-button.liked {
+    color: pink;
+  }
+  
+  /* Notification bell */
+  .bell-icon {
+    position: relative;
+  }
+  
+  .bell-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+  }
+  

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotseat - Profile</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Hotseat</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="posts.html">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="profile-header">
+      <div class="cover-photo">
+        <img id="cover-photo" src="path_to_default_cover_photo.jpg" alt="Cover Photo">
+        <input type="file" id="cover-photo-input" class="d-none">
+        <button class="btn btn-primary" id="upload-cover-photo-btn">Upload Cover Photo</button>
+      </div>
+      <div class="profile-info">
+        <img id="profile-picture" class="profile-picture" src="path_to_default_profile_picture.jpg" alt="Profile Picture">
+        <input type="file" id="profile-picture-input" class="d-none">
+        <button class="btn btn-primary" id="upload-profile-picture-btn">Upload Profile Picture</button>
+        <h2 id="username"></h2>
+        <p id="city">City: Atlanta</p>
+        
+        <p id="followers">Followers:777 <span id="followers-count">0</span></p>
+        <p id="following">Following: 19<span id="following-count">0</span></p>
+        
+      
+      </div>
+    </div>
+    <hr>
+    <h2>Create New Post</h2>
+    <form id="post-form">
+        <div class="form-group">
+            <label for="postContent">Post Content:</label>
+            <textarea id="postContent" class="form-control" rows="3" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image-input">Upload Image:</label>
+            <input type="file" id="image-input" accept="image/*" aria-label="Select Image">
+            <img id="image-preview" src="#" alt="Image Preview" style="display: none; max-width: 100%; max-height: 200px;">
+        </div> 
+        <button type="submit">Post</button>
+    </form>
+    
+    <hr>
+    <div class="container mt-5">
+    <h2>Your Posts</h2>
+    <div id="user-posts">
+      <style>
+      /* Post Styles */
+.post {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.post-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.post-username {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.post-date {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.delete-btn {
+    cursor: pointer;
+    margin-left: auto;
+    color: #999;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.like-btn,
+.share-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.like-btn:hover {
+    color: #ff4d4d; /* Heart color on hover */
+}
+
+.liked {
+    color: #ff4d4d; /* Heart color when liked */
+}
+
+.share-btn:hover {
+    color: #28a745; /* Share button color on hover */
+}
+</style>
+      <!-- User's posts will be displayed here -->
+    </div>
+    
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

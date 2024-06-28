@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotseat - Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Blinking animation for the heading */
+    @keyframes blink {
+      0%, 49.9% {
+        opacity: 0;
+      }
+      50%, 100% {
+        opacity: 1;
+      }
+    }
+    .blink-text {
+      animation: blink 1.5s infinite;
+    }
+
+    /* Typing animation for the login header */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    .typing-effect {
+      overflow: hidden; /* Ensures the text is hidden when typing */
+      white-space: nowrap; /* Prevents wrapping of text */
+      animation: typing 2s steps(28, end), blink .5s step-end infinite alternate; /* Adjust steps based on text length */
+      border-right: 1px solid; /* Creates the typing cursor effect */
+      font-family: 'Courier New', Courier, monospace; /* Optional: Use a monospace font for typewriter effect */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hotseat</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">My Hotseat</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Background Video -->
+  <section id="hero">
+    <div class="video-background">
+      <div class="video-wrap">
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/24IK8ERugWM?autoplay=1&controls=0&loop=1&playlist=24IK8ERugWM&modestbranding=1&mute=1&start=30" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+          <div class="login-form">
+            <h1 class="mb-4 typing-effect">Log into Hotseat</h1>
+            <form id="login-form">
+              <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Log In</button>
+            </form>
+            <div class="mt-3">
+              <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section> <div class="col-12 mt-5">
+    <p class="mbr-fonts-style copyright display-7">© 2024 Hotseat. All Rights Reserved.</p>
+</div</section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
